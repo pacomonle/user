@@ -5,26 +5,38 @@
             <tr>
                 <td><label th:text="#{form.user.nombre}">Nombre: </label></td>
                 <td><input type="text" th:field="*{nombre}" /></td>
+                <td th:if="${#fields.hasErrors('nombre')}">
+                    <span th:errors="*{nombre}"></td>
             </tr>
             <tr>
                 <td><label th:text="#{form.user.apellido}">Apellido: </label></td>
                 <td><input type="text" th:field="*{apellido}" /></td>
+                <td th:if="${#fields.hasErrors('apellido')}">
+                    <span th:errors="*{apellido}"></td>
             </tr>
             <tr>
                 <td><label th:text="#{form.user.correo}">Correo: </label></td>
                 <td><input type="text" th:field="*{correo}" /></td>
+                <td th:if="${#fields.hasErrors('correo')}">
+                    <span th:errors="*{correo}"></td>
             </tr>
             <tr>
                 <td><label th:text="#{form.user.pass}">Password: </label></td>
                 <td><input type="password" th:field="*{password}" /></td>
+                <td th:if="${#fields.hasErrors('password')}">
+                    <span th:errors="*{password}"></td>
             </tr>
             <tr>
                 <td><label th:text="#{form.user.edad}">Edad: </label></td>
                 <td><input type="number" th:field="*{edad}" /></td>
+                <td th:if="${#fields.hasErrors('edad')}">
+                    <span th:errors="*{edad}"></td>
             </tr>
             <tr>
                 <td><label th:text="#{form.user.sexo}">Sexo: </label></td>
                 <td><input type="checkbox" th:field="*{sexo}" /></td>
+                <td th:if="${#fields.hasErrors('sexo')}">
+                    <span th:errors="*{sexo}"></td>
             </tr>
             <tr>
                 <td>
@@ -34,3 +46,4 @@
         </table>
     </fieldset>
 </form>
+
